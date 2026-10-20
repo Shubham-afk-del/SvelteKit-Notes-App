@@ -11,7 +11,7 @@ via **better-sqlite3**.
 
 ## Requirements
 
-- [Node.js](https://nodejs.org/) (version 18 or newer) and npm.
+- [Node.js](https://nodejs.org/) (version 22.12 or newer) and npm.
 
 `better-sqlite3` and `bcrypt` are compiled when you install, so the first
 `npm install` may take a minute.
