@@ -1,7 +1,7 @@
 <script>
-	import { page } from '$app/stores';
-	export let form;
-	$: resetOk = $page.url.searchParams.get('reset') === '1';
+	import { page } from '$app/state';
+	let { form } = $props();
+	let resetOk = $derived(page.url.searchParams.get('reset') === '1');
 </script>
 
 <svelte:head>
