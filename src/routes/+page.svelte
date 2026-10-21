@@ -1,10 +1,9 @@
 <script>
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import NoteCard from '$lib/components/NoteCard.svelte';
 
-	export let data;
-	export let form;
-	$: deleted = $page.url.searchParams.get('deleted') === '1';
+	let { data, form } = $props();
+	let deleted = $derived(page.url.searchParams.get('deleted') === '1');
 </script>
 
 <svelte:head>
