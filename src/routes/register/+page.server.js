@@ -2,9 +2,9 @@
 // the password with bcrypt (cost 12) and signs the new user straight in.
 import { fail, redirect } from '@sveltejs/kit';
 import bcrypt from 'bcrypt';
-import { getUser, createUser } from '$lib/db';
-import { userSchema } from '$lib/validation';
-import { login } from '$lib/auth';
+import { getUser, createUser } from '#lib/db/index.js';
+import { userSchema } from '#lib/validation.js';
+import { login } from '#lib/auth.js';
 
 export function load({ locals }) {
 	if (locals.user) throw redirect(302, '/');

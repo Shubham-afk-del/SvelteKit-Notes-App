@@ -3,8 +3,8 @@
 // usernames exist.
 import { fail, redirect } from '@sveltejs/kit';
 import bcrypt from 'bcrypt';
-import { getUser } from '$lib/db';
-import { login } from '$lib/auth';
+import { getUser } from '#lib/db/index.js';
+import { login } from '#lib/auth.js';
 
 export function load({ locals }) {
 	if (locals.user) throw redirect(302, '/');

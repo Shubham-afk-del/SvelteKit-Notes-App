@@ -11,10 +11,10 @@ import {
 	getUser,
 	updateUserPassword,
 	deleteUser
-} from '$lib/db';
-import { categorySchema, userSchema } from '$lib/validation';
-import clean from '$lib/sanitize';
-import { logout } from '$lib/auth';
+} from '#lib/db/index.js';
+import { categorySchema, userSchema } from '#lib/validation.js';
+import clean from '#lib/sanitize.js';
+import { logout } from '#lib/auth.js';
 
 export function load({ locals }) {
 	if (!locals.user) throw redirect(302, '/login');

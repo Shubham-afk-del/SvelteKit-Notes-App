@@ -1,5 +1,5 @@
 <script>
-	import NoteCard from '$lib/components/NoteCard.svelte';
+	import NoteCard from '#lib/components/NoteCard.svelte';
 
 	export let data;
 </script>

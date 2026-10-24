@@ -1,6 +1,6 @@
 <script>
-	import '$lib/app.css';
-	import Nav from '$lib/components/Nav.svelte';
+	import '#lib/app.css';
+	import Nav from '#lib/components/Nav.svelte';
 
 	export let data;
 </script>

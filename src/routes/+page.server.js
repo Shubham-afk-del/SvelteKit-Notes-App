@@ -1,9 +1,9 @@
 // Homepage. load returns the user's notes and categories; the create action backs
 // the new-note form as a POST, so adding a note works even without JavaScript.
 import { fail } from '@sveltejs/kit';
-import { getNotes, getCategories, getCategory, createNote } from '$lib/db';
-import { noteSchema } from '$lib/validation';
-import clean from '$lib/sanitize';
+import { getNotes, getCategories, getCategory, createNote } from '#lib/db/index.js';
+import { noteSchema } from '#lib/validation.js';
+import clean from '#lib/sanitize.js';
 
 export function load({ locals }) {
 	if (!locals.user) {
