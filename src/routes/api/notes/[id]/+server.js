@@ -1,9 +1,9 @@
 // REST endpoints for a single note. Each handler 404s if the note is missing or
 // belongs to someone else, so note ids can't be probed by other users.
 import { json } from '@sveltejs/kit';
-import { getNote, getCategory, updateNote, deleteNote } from '$lib/db';
-import { noteSchema } from '$lib/validation';
-import clean from '$lib/sanitize';
+import { getNote, getCategory, updateNote, deleteNote } from '#lib/db/index.js';
+import { noteSchema } from '#lib/validation.js';
+import clean from '#lib/sanitize.js';
 
 export function GET({ params, locals }) {
 	if (!locals.user) return json({ error: 'Not logged in' }, { status: 401 });

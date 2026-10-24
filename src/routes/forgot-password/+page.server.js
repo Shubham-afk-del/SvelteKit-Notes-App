@@ -4,8 +4,8 @@
 // so the form never reveals which usernames exist.
 import { fail, redirect } from '@sveltejs/kit';
 import bcrypt from 'bcrypt';
-import { getUser, updateUserPassword } from '$lib/db';
-import { userSchema } from '$lib/validation';
+import { getUser, updateUserPassword } from '#lib/db/index.js';
+import { userSchema } from '#lib/validation.js';
 
 export function load({ locals }) {
 	if (locals.user) throw redirect(302, '/');

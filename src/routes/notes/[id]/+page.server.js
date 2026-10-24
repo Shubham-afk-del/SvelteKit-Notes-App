@@ -2,7 +2,7 @@
 // the edit form; redirects anonymous users to /login and 404s on a note that
 // isn't theirs.
 import { error, redirect } from '@sveltejs/kit';
-import { getNote, getCategories } from '$lib/db';
+import { getNote, getCategories } from '#lib/db/index.js';
 
 export function load({ params, locals }) {
 	if (!locals.user) throw redirect(302, '/login');

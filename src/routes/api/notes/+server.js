@@ -1,9 +1,9 @@
 // REST endpoints for the notes collection. Both require a logged-in user and only
 // ever touch that user's own notes.
 import { json } from '@sveltejs/kit';
-import { getNotes, getNotesByCategory, getCategory, createNote } from '$lib/db';
-import { noteSchema } from '$lib/validation';
-import clean from '$lib/sanitize';
+import { getNotes, getNotesByCategory, getCategory, createNote } from '#lib/db/index.js';
+import { noteSchema } from '#lib/validation.js';
+import clean from '#lib/sanitize.js';
 
 export function GET({ url, locals }) {
 	// 401 unless signed in; an optional ?category= narrows the list to one category

@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/state';
-	import NoteCard from '$lib/components/NoteCard.svelte';
+	import NoteCard from '#lib/components/NoteCard.svelte';
 
 	let { data, form } = $props();
 	let deleted = $derived(page.url.searchParams.get('deleted') === '1');

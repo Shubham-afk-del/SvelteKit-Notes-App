@@ -1,5 +1,5 @@
 import { redirect } from '@sveltejs/kit';
-import { logout } from '$lib/auth';
+import { logout } from '#lib/auth.js';
 
 export const actions = {
 	default: ({ cookies }) => {
