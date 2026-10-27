@@ -11,7 +11,7 @@ via **better-sqlite3**.
 
 ## Requirements
 
-- [Node.js](https://nodejs.org/) (version 22.12 or newer) and npm.
+- [Node.js](https://nodejs.org/) (version 22.17 or newer) and npm.
 
 `better-sqlite3` and `bcrypt` are compiled when you install, so the first
 `npm install` may take a minute.
@@ -150,7 +150,7 @@ notes-app/
 │       ├── settings/           theme, categories, reset password, delete account
 │       └── api/notes/          REST endpoints (GET/POST/PUT/DELETE)
 ├── .env.example                copy to .env before running
-└── svelte.config.js / vite.config.js
+└── vite.config.js            SvelteKit plugin, adapter and preprocessing
 ```
 
 ## Technologies used
